@@ -1,4 +1,4 @@
-
+export let intentos = 6
 
 export class Ahorcado {
     constructor(palabra_recibida = '') {
@@ -15,6 +15,19 @@ export class Ahorcado {
         this.palabraAdivinar.split('').forEach((letraAdivinar, index) => {
             if (letraAdivinar === letra) this.palabraUsuario[index] = letra
         })
+    }
+
+    descuentaVida = () => {
+        intentos--
+        return intentos
+    }
+
+    verificaPosicion = (letra) => {
+        const indices = []
+        this.palabraAdivinar.split('').forEach((letraAdivinar, index) => {
+            if (letraAdivinar === letra) indices.push(index)
+        })
+        return indices
     }
 
 }
