@@ -25,4 +25,6 @@ jobs:
         run: cd ./src
 
       - name: Run Tests
-        run: npm run test
+        run: 
+          cd ./src
+          npm run test
