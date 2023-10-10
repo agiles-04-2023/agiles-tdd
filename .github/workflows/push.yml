@@ -21,5 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Set working directory
+        run: cd ./src
+
       - name: Run Tests
         run: npm run test
